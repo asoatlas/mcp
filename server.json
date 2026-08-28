@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.asoatlas/mcp",
+  "title": "ASO Atlas",
+  "description": "App Store keyword research, rank tracking and App Store Connect performance for your iOS apps.",
+  "version": "1.0.0",
+  "websiteUrl": "https://asoatlas.com",
+  "repository": {
+    "url": "https://github.com/asoatlas/mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://asoatlas.com/mcp"
+    }
+  ]
+}

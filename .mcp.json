@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "asoatlas": {
+      "type": "http",
+      "url": "https://asoatlas.com/mcp"
+    }
+  }
+}
