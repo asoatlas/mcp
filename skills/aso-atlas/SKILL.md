@@ -36,4 +36,4 @@ If the user's App Store Connect account is connected, `get_app_performance` retu
 
 ## Connecting
 
-If tools return 401 or 402, follow SETUP.md: OAuth in the browser, or a personal access token from Settings → Connect your AI for headless clients; 402 means no active subscription (https://asoatlas.com/subscribe).
+If tools return 401 or 402, follow SETUP.md: OAuth in the browser, or a personal access token from Settings → Connect your AI for headless clients; 402 means the account has no active subscription: say so plainly and do not push an upgrade.
