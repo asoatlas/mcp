@@ -2,7 +2,8 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
   "mcpServers": {
     "asoatlas": {
-      "url": "https://asoatlas.com/mcp"
+      "url": "https://asoatlas.com/mcp",
+      "type": "streamable-http"
     }
   }
 }

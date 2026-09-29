@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "aso-atlas",
-  "version": "1.0.0",
-  "description": "App Store Optimization inside your editor: research keywords with Apple-reported popularity and difficulty, track rankings per storefront, review competitors and read your App Store Connect performance.",
+  "version": "1.1.0",
+  "description": "App Store Optimization inside your agent: research App Store and Google Play keywords with Apple-reported popularity and difficulty, track rankings per storefront, review competitors and read your App Store Connect performance.",
   "author": {
     "name": "ASO Atlas",
     "email": "support@asoatlas.com",
@@ -11,5 +11,45 @@
   "homepage": "https://asoatlas.com/docs/connect-your-ai",
   "repository": "https://github.com/asoatlas/mcp",
   "license": "MIT",
-  "keywords": ["aso", "app-store", "app-store-optimization", "keywords", "rank-tracking", "ios", "app-store-connect"]
+  "keywords": [
+    "aso",
+    "app-store",
+    "google-play",
+    "app-store-optimization",
+    "keywords",
+    "rank-tracking",
+    "ios",
+    "android",
+    "app-store-connect"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "ASO Atlas",
+        "shortDescription": "App Store keyword research and rank tracking",
+        "longDescription": "Research App Store and Google Play keywords with Apple-reported search popularity and a difficulty score, track your apps' rankings daily in 59 storefronts, find keyword gaps against competitors, draft metadata and read your own App Store Connect performance. Everything is scoped to your ASO Atlas account; nothing is changed on the App Store itself.",
+        "developerName": "ASO Atlas",
+        "category": "Data & Analytics",
+        "capabilities": [
+          "Interactive",
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://asoatlas.com",
+        "privacyPolicyURL": "https://asoatlas.com/privacy",
+        "termsOfServiceURL": "https://asoatlas.com/terms",
+        "supportURL": "mailto:support@asoatlas.com",
+        "defaultPrompt": [
+          "Which keywords should my app target next?",
+          "Research popularity and difficulty for these App Store keywords",
+          "How is my app doing on the App Store this month?"
+        ],
+        "brandColor": "#18181B",
+        "brandColorDark": "#FAFAFA",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.png",
+        "screenshots": []
+      }
+    }
+  }
 }

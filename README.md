@@ -2,7 +2,7 @@
 
 # ASO Atlas MCP server
 
-[ASO Atlas](https://asoatlas.com) is an App Store Optimization tool for iOS apps: keyword research with Apple-reported search popularity and a difficulty score, daily rank tracking in 59 storefronts, competitor keyword gaps, a metadata optimizer and your own App Store Connect performance.
+[ASO Atlas](https://asoatlas.com) is an App Store Optimization tool for App Store and Google Play apps: keyword research with Apple-reported search popularity and a difficulty score, daily rank tracking in 59 storefronts, competitor keyword gaps, a metadata optimizer and your own App Store Connect performance.
 
 This repository holds the public manifests for its hosted MCP server, so any MCP client can research keywords and act on your ASO Atlas account mid-conversation.
 
@@ -44,9 +44,28 @@ claude plugin install aso-atlas@asoatlas-mcp
 code --add-mcp '{"name":"asoatlas","type":"http","url":"https://asoatlas.com/mcp"}'
 ```
 
+### Codex
+
+Install this repository as a plugin, which adds the server together with the same skill:
+
+```bash
+codex plugin marketplace add asoatlas/mcp
+codex plugin add aso-atlas@asoatlas
+codex mcp login asoatlas
+```
+
+Or only the server, in `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.asoatlas]
+url = "https://asoatlas.com/mcp"
+```
+
+then `codex mcp login asoatlas` to approve the consent screen.
+
 ### ChatGPT
 
-Settings → Connectors → Create (developer mode) → paste the server URL. The OAuth prompt signs you in to ASO Atlas.
+Settings → Security and login → turn on Developer mode, then Plugins → + → paste the server URL. The OAuth prompt signs you in to ASO Atlas.
 
 ### Hermes Agent, containers and other headless clients
 
@@ -91,8 +110,8 @@ Every tool carries `readOnlyHint`, `destructiveHint` and `openWorldHint` annotat
 ## What is in this repository
 
 - `server.json`: the entry published to the [official MCP Registry](https://registry.modelcontextprotocol.io) as `com.asoatlas/mcp`
-- `.claude-plugin/plugin.json` + `.mcp.json` + `skills/aso-atlas/SKILL.md`: a Claude Code plugin bundling the server with a skill
-- `plugin.json` + `mcp.json`: the same as an [Agent Plugin](https://agent-plugins.org) for Cursor and compatible clients
+- `.claude-plugin/plugin.json` + `.claude-plugin/marketplace.json` + `.mcp.json` + `skills/aso-atlas/SKILL.md`: a Claude Code plugin bundling the server with a skill
+- `plugin.json` + `mcp.json`: the same as an [Agent Plugin](https://agent-plugins.org) for Codex (OpenAI settings under `extensions.com.openai`), Cursor and compatible clients; `.agents/plugins/marketplace.json` makes the repository a Codex marketplace
 - `SETUP.md`: the connection walkthrough a client can follow after install
 
 The server itself is part of the ASO Atlas web application and is not open source. The manifests and skill here are MIT licensed.

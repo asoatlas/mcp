@@ -1,0 +1,20 @@
+{
+  "name": "asoatlas",
+  "interface": {
+    "displayName": "ASO Atlas"
+  },
+  "plugins": [
+    {
+      "name": "aso-atlas",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Data & Analytics"
+    }
+  ]
+}

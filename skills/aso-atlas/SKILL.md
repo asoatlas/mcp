@@ -1,11 +1,11 @@
 ---
 name: aso-atlas
-description: App Store Optimization with ASO Atlas. Use for App Store keyword research (popularity, difficulty, who ranks), tracking an iOS app's keyword rankings per storefront, competitor keyword gaps, metadata (title, subtitle, keyword field) drafts, and questions like "how is my app doing" answered from App Store Connect data. Requires the ASO Atlas MCP server (asoatlas.com/mcp).
+description: App Store Optimization with ASO Atlas. Use for App Store and Google Play keyword research (popularity, difficulty, who ranks), tracking an app's keyword rankings per storefront, competitor keyword gaps, metadata (title, subtitle, keyword field) drafts, and questions like "how is my app doing" answered from App Store Connect data. Requires the ASO Atlas MCP server (asoatlas.com/mcp).
 ---
 
 # ASO Atlas
 
-ASO Atlas is an App Store Optimization tool for iOS apps. Its MCP server exposes the user's own account: tracked apps, keywords per storefront with position, popularity and difficulty, competitors, keyword lists, a metadata optimizer and (when connected) private App Store Connect performance.
+ASO Atlas is an App Store Optimization tool for App Store and Google Play apps. Its MCP server exposes the user's own account: tracked apps, keywords per storefront with position, popularity and difficulty, competitors, keyword lists, a metadata optimizer and (when connected) private App Store Connect performance.
 
 ## Start here
 
@@ -20,6 +20,7 @@ ASO Atlas is an App Store Optimization tool for iOS apps. Its MCP server exposes
 - **Difficulty** is 0-100, lower is easier. It weighs how many top results carry the term in their title and how strong those apps are.
 - A keyword with `pending: true` has not been measured yet (research is queued). Say "not measured yet", then call again in a moment.
 - Storefronts are two-letter country codes (`us`, `pl`, `de`...). The same term can be tracked in several markets.
+- **Google Play** (`platform: "android"`, apps identified by package name in `store_id`): Google publishes no search volume, so Play keywords carry an estimated `demand` band (Very low to Very high) and `popularity` is always `null`. Present the band, never a number.
 
 ## Recommending keywords
 

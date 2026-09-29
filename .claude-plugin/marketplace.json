@@ -1,0 +1,17 @@
+{
+  "name": "asoatlas-mcp",
+  "owner": {
+    "name": "ASO Atlas",
+    "email": "support@asoatlas.com"
+  },
+  "metadata": {
+    "description": "The ASO Atlas plugin: its hosted MCP server plus a skill for App Store keyword research and rank tracking."
+  },
+  "plugins": [
+    {
+      "name": "aso-atlas",
+      "source": "./",
+      "description": "App Store Optimization inside Claude: keyword research, rank tracking, competitors and App Store Connect performance."
+    }
+  ]
+}

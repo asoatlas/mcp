@@ -1,7 +1,7 @@
 {
   "name": "aso-atlas",
   "displayName": "ASO Atlas",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "App Store Optimization inside Claude: research keywords with Apple-reported popularity and difficulty, track rankings per storefront, review competitors and read your App Store Connect performance.",
   "author": {
     "name": "ASO Atlas",
@@ -11,6 +11,14 @@
   "homepage": "https://asoatlas.com/docs/connect-your-ai",
   "repository": "https://github.com/asoatlas/mcp",
   "license": "MIT",
-  "keywords": ["aso", "app-store", "app-store-optimization", "keywords", "rank-tracking", "ios", "app-store-connect"],
+  "keywords": [
+    "aso",
+    "app-store",
+    "app-store-optimization",
+    "keywords",
+    "rank-tracking",
+    "ios",
+    "app-store-connect"
+  ],
   "mcpServers": "./.mcp.json"
 }
