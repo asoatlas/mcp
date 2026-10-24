@@ -1,0 +1,5 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "aso-atlas",
+  "description": "App Store and Google Play keyword research, rank tracking, store performance, in-app feedback and onboarding analytics."
+}

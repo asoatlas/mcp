@@ -60,7 +60,11 @@ In `mcp_config.json` (Agent panel → MCP Servers → Manage → View raw config
 { "mcpServers": { "asoatlas": { "serverUrl": "https://asoatlas.com/mcp" } } }
 ```
 
-The same configuration ships as an Antigravity plugin in [`plugins/aso-atlas`](plugins/aso-atlas).
+Or install this repository as an Antigravity plugin, which adds the server together with the skill:
+
+```bash
+agy plugin install https://github.com/asoatlas/mcp
+```
 
 ### Kiro
 
@@ -159,7 +163,7 @@ Every tool carries `readOnlyHint`, `destructiveHint` and `openWorldHint` annotat
 - `.claude-plugin/plugin.json` + `.claude-plugin/marketplace.json` + `.mcp.json` + `skills/aso-atlas/SKILL.md`: a Claude Code plugin bundling the server with a skill
 - `plugin.json` + `mcp.json`: the same as an [Agent Plugin](https://agent-plugins.org) for Codex (OpenAI settings under `extensions.com.openai`), Cursor and compatible clients; `.agents/plugins/marketplace.json` makes the repository a Codex marketplace
 - `gemini-extension.json`: a Gemini CLI extension (server + the skill)
-- `plugins/aso-atlas/`: an Antigravity plugin (`plugin.json` + `mcp_config.json`)
+- `.antigravity-plugin/plugin.json` + `mcp_config.json`: an Antigravity plugin (server + the skill); `plugins/aso-atlas/` holds the same without the skill
 - `SETUP.md`: the connection walkthrough a client can follow after install
 
 The server itself is part of the ASO Atlas web application and is not open source. The manifests and skill here are MIT licensed.
