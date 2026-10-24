@@ -44,6 +44,52 @@ claude plugin install aso-atlas@asoatlas-mcp
 code --add-mcp '{"name":"asoatlas","type":"http","url":"https://asoatlas.com/mcp"}'
 ```
 
+### Gemini CLI
+
+```bash
+gemini extensions install https://github.com/asoatlas/mcp
+```
+
+The extension adds the server and the same skill. Sign in with `/mcp auth asoatlas`.
+
+### Google Antigravity
+
+In `mcp_config.json` (Agent panel → MCP Servers → Manage → View raw config):
+
+```json
+{ "mcpServers": { "asoatlas": { "serverUrl": "https://asoatlas.com/mcp" } } }
+```
+
+The same configuration ships as an Antigravity plugin in [`plugins/aso-atlas`](plugins/aso-atlas).
+
+### Kiro
+
+[Add to Kiro](https://kiro.dev/launch/mcp/add?name=asoatlas&config=%7B%22url%22%3A%22https%3A%2F%2Fasoatlas.com%2Fmcp%22%7D), or in `.kiro/settings/mcp.json`:
+
+```json
+{ "mcpServers": { "asoatlas": { "url": "https://asoatlas.com/mcp" } } }
+```
+
+### Windsurf
+
+In `~/.codeium/windsurf/mcp_config.json`:
+
+```json
+{ "mcpServers": { "asoatlas": { "serverUrl": "https://asoatlas.com/mcp" } } }
+```
+
+### Cline, Kilo Code and Roo Code
+
+MCP Servers → Remote Servers → name `asoatlas`, URL `https://asoatlas.com/mcp`, transport Streamable HTTP.
+
+### Goose
+
+`goose configure` → Add Extension → Remote Extension (Streamable HTTP) → `https://asoatlas.com/mcp`.
+
+### LM Studio
+
+[Add to LM Studio](lmstudio://add_mcp?name=asoatlas&config=eyJ1cmwiOiJodHRwczovL2Fzb2F0bGFzLmNvbS9tY3AifQ==)
+
 ### Codex
 
 Install this repository as a plugin, which adds the server together with the same skill:
@@ -112,6 +158,8 @@ Every tool carries `readOnlyHint`, `destructiveHint` and `openWorldHint` annotat
 - `server.json`: the entry published to the [official MCP Registry](https://registry.modelcontextprotocol.io) as `com.asoatlas/mcp`
 - `.claude-plugin/plugin.json` + `.claude-plugin/marketplace.json` + `.mcp.json` + `skills/aso-atlas/SKILL.md`: a Claude Code plugin bundling the server with a skill
 - `plugin.json` + `mcp.json`: the same as an [Agent Plugin](https://agent-plugins.org) for Codex (OpenAI settings under `extensions.com.openai`), Cursor and compatible clients; `.agents/plugins/marketplace.json` makes the repository a Codex marketplace
+- `gemini-extension.json`: a Gemini CLI extension (server + the skill)
+- `plugins/aso-atlas/`: an Antigravity plugin (`plugin.json` + `mcp_config.json`)
 - `SETUP.md`: the connection walkthrough a client can follow after install
 
 The server itself is part of the ASO Atlas web application and is not open source. The manifests and skill here are MIT licensed.

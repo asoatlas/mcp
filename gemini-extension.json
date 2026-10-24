@@ -1,0 +1,10 @@
+{
+  "name": "aso-atlas",
+  "version": "1.1.0",
+  "description": "App Store and Google Play keyword research, rank tracking, store performance, in-app feedback and onboarding analytics.",
+  "mcpServers": {
+    "asoatlas": {
+      "httpUrl": "https://asoatlas.com/mcp"
+    }
+  }
+}
